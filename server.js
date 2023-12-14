@@ -1,8 +1,23 @@
+require('dotenv').config()
+
 // Import dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const admin = require('firebase-admin');
+
+admin.initializeApp({
+    credential: admin.credential.cert({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL
+    }),
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET
+    });
+
+// Initialize Firebase
+//firebase.initializeApp(firebaseConfig);
 
 // Create a new express application called 'app'
 const app = express();
@@ -48,3 +63,5 @@ app.get('*', (req, res) => {
 
 // Set our server to listen on the port defiend by our port variable
 app.listen(port, () => console.log(`BACK_END_SERVICE_PORT: ${port}`));
+
+module.exports.admin = admin;
