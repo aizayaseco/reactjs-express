@@ -40,11 +40,7 @@ export default function Pexel(){
     }
 
     axios
-      .get(`https://api.pexels.com/v1/curated?page=${currentPage}&per_page=6`,{
-        headers :{
-          "Authorization": process.env.NODE_ENV.AUTH_ID_PEXEL
-        }
-      })
+      .get(`/api/v1/feed/${currentPage}`,)
       .then(response =>{
         return response.data;
       })

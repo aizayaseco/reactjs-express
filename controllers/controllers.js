@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const saySomething = (req, res, next) => {
     res.status(200).json({
         body: 'Hello from the server!'
@@ -70,5 +72,40 @@ const getTime = (req, res, next) => {
     //);
 };
 
+const getFeed = (req, res, next) => {
+    const https = require('https'); 
+    var page = req.params.page;
+
+    const options = { 
+        hostname: 'api.pexels.com', 
+        path: `/v1/curated?page=${page}&per_page=6`, 
+        method: 'GET', 
+        headers: {
+            'Authorization': process.env.AUTH_ID_PEXEL
+        }
+      }; 
+
+    const request = https.request(options, (response) => {
+        let data = ''  
+        response.on('data', (chunk) => { 
+            data += chunk; 
+        }); 
+       
+       response.on('end', () => { 
+          // Process the data received in the response 
+          res.status(200).json(
+            JSON.parse(data)
+          );
+        }); 
+      }); 
+
+    request.on('error', (error) => { 
+        console.error(error); 
+    }); 
+    
+    request.end(); 
+};
+
 module.exports.saySomething = saySomething;
 module.exports.getTime = getTime;
+module.exports.getFeed = getFeed;

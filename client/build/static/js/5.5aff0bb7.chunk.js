@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[5],{62:function(e,n){},70:function(e,n){},77:function(e,n){},81:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return o}));var a=t(0),c=t.n(a),r=t(44);var i=Object(r.b)({header:{id:"".concat("app.containers.NotFoundPage",".header"),defaultMessage:"Page not found"}});function o(){return c.a.createElement("div",{className:"container mt-5 text-center"},c.a.createElement("h1",null,c.a.createElement(r.a,i.header)))}}}]);
+//# sourceMappingURL=5.5aff0bb7.chunk.js.map
