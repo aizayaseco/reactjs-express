@@ -78,7 +78,7 @@ export default function HomePage() {
     {!isLoading ? (
       <span>
       <h1>{timeVal?.time}</h1>
-      <span className="badge badge-secondary">{timeVal?.hour > 12 ? timeVal?.hour-12 : timeVal?.time.substring(0,2)}:{timeVal?.time.substring(3,5)}{timeVal?.hour > 12 ? "PM":"AM"}</span>
+      <span className="badge badge-secondary">{timeVal?.hour > 12 ? timeVal?.hour-12 : timeVal?.time?.substring(0,2)}:{timeVal?.time?.substring(3,5)}{timeVal?.hour > 12 ? "PM":"AM"}</span>
     </span>
     ) : (null)}
   </div>

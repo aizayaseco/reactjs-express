@@ -13,6 +13,7 @@
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
     "client:build": "cd client && npm run build",
+    "deploy": "cd client &&  npm install -g serve && serve -s build",
     "install-client": "cd client && npm install"
   },
   "repository": {
