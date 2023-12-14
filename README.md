@@ -1,21 +1,22 @@
 # reactjs-express
-This app will run in using ports:
+This app will run locally using ports:
 localhost:3000 and localhost:8000
 
 NPM version (8.5.5)
+Node version (16.5.0)
 
 First Things first
-run npm install
- 
-got to client folder, 
-run npm install
-
-go back to the root folder,
 
 create .env file and put 
 AUTH_ID_PEXEL=<value>
 
-run npm run dev
+run npm install && npm run install-client && npm run dev
 
-To access the page, got to browser
+To access the page locally, go to browser
 localhost:3000
+
+Deployed:
+https://tz-pexel.onrender.com
+
+For API connections:
+https://tz-pexel.onrender.com/api
