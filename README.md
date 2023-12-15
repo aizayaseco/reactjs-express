@@ -18,6 +18,12 @@ localhost:3000
 Deployed:
 https://tz-pexel.onrender.com
 
+Time conversion:
+https://tz-pexel.onrender.com/
+
+Paginated Pexel Imgs Feed:
+https://tz-pexel.onrender.com/feed
+
 For API connections:
 https://tz-pexel.onrender.com/api
 
