@@ -22,7 +22,7 @@ Time conversion:
 https://tz-pexel.onrender.com/
 
 Paginated Pexel Imgs Feed:
-https://tz-pexel.onrender.com/feed
+https://tz-pexel.onrender.com/feed/1
 
 For API connections:
 https://tz-pexel.onrender.com/api
